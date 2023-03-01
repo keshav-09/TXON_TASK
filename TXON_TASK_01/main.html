@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,400i,500,700|Titillium+Web:600" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+    <title>website</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        --primary-color: #65e5da;
+        /*-- light green color --*/
+        --secondary-color: #dfeee3;
+        /*-- light gray color --*/
+        --third-color: #000000;
+        /*-- Black color ----*/
+        --fourth-color: #ffffff;
+        /*-- White color ----*/
+        margin: 0px;
+        padding: 0px;
+        /* background-image: linear-gradient(95.2deg, rgb(115, 138, 138) 26.8%, rgb(218, 228, 228) 64%); */
+        background-image:#f0fbf7
+        /* background-repeat: no-repeat;
+        background-size: 5000px 2500px;
+        color: white;
+        size: 10px; */
+    }
+
+    .left {
+        max-width: 100%;
+        display: inline-block;
+        /* border: 3px solid  red ; */
+        /* border-radius: 250px; */
+        position: absolute;
+        left: 70px;
+        top: 20px;
+    }
+
+    .left div {
+        text-align: center;
+        font-size: 2px;
+
+    }
+
+    .left img {
+
+        width: 45px;
+        margin: 10px;
+        /* filter: invert(100%); */
+        /* for black to white */
+    }
+
+    .right {
+        display: absolute;
+        /* border: 4px solid white; */
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        color: #65e5da;
+
+
+    }
+
+    .btn {
+        margin: 10px 10px;
+        /* background-color: grey; */
+        /* color: white; */
+        padding: 5px 5px;
+        /* border: 2px solid red; */
+        font-size: 16px;
+        /* border-radius: 10px; */
+        background-color: rgb(191, 203, 206);
+        border-radius: 40px;
+        /* padding: 10px 30px; */
+        /* font-size: 1.2rem; */
+        font-weight: 500px;
+        /* font-family: var(--heading-font); */
+        border: none;
+        /* border-radius: 50px; */
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        /* margin-right: 1.5rem; */
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .btn:hover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+        transform: scale(1.1, 1.1);
+    }
+
+    .btn.dark {
+        color: var(--third-color);
+        background: var(--fourth-color);
+    }
+
+    .btn.dark:hover {
+        color: var(--third-color);
+        background: var(--secondary-color);
+    }
+
+    .btn.light {
+        color: var(--third-color);
+        background: var(--secondary-color);
+    }
+
+    .btn.light:hover {
+        color: var(--third-color);
+        background: var(--fourth-color);
+    }
+
+    .mid {
+        display: flex;
+        margin: 20px auto;
+        /* border: 1px solid wheat;   */
+        position: absolute;
+        left: 100px;
+        top: 13px;
+
+    }
+
+    .nav {
+        display: inline-block;
+
+    }
+
+    .nav li {
+        display: inline-block;
+        /* padding: 3px 3px; */
+        /* float: left;    */
+        margin: 3px;
+        text-decoration: none;
+        font-size: 20px;
+
+
+    }
+
+    .nav li a {
+        text-decoration: none;
+        padding: 70px;
+    }
+
+    .nav li a:hover,
+    nav li a:active {
+        text-decoration: underline;
+        color: rgb(18, 17, 17);
+    }
+
+    .para {
+
+        display: inline-flex;
+        /* padding-top: 200px; */
+        /* font-size: 75px; */
+        /* padding-right: 48px; */
+        /* min-width: 512px; */
+        /* border:  2px solid red; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    }
+
+    .h3 {
+        /* border: 2px solid red; */
+        padding-top: 170px;
+        font-size: 50px;
+        color: #5D6AFF;
+        width: 500px;
+        margin-left: 200px;
+    }
+
+    .info {
+        /* border: 2px solid red; */
+        display: flex;
+        padding-top: 350px;
+        font-size: 10px;
+        width: 200px;
+        margin-left: -500px;
+        color: black;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .buttons {
+        /* border: 2px solid red; */
+        margin-top: 1.5rem;
+        display: flex;
+        /* justify-content: space-between; */
+        flex-direction: row;
+        align-items: center;
+        color: #65e5da;
+        margin-left: 200px;
+
+    }
+
+    .col {
+        max-width: 90%;
+        height: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .featured-img {
+        background-image: linear-gradient(40deg, #65e5da, #fff0e5);
+        height: 500px;
+        float: right;
+        /* border: 2px solid black ; */
+        /* left: 400px;   */
+        margin-top: -290px;
+        /* margin-right: 1000px; */
+    }
+
+    img:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    .heading1 {
+        font-size: 2rem;
+        font-style: italic;
+        color: linear-gradient(40deg, #2a534f, #cfc1ce);
+        ;
+        line-height: 2;
+        margin-top: 200px;
+        text-decoration: line-through;
+        /* color: #000000; */
+        font-display: swap;
+        margin-left: 120px;
+        text-align: center;
+        text-decoration-thickness: 1px;
+    }
+
+
+    .box {
+
+        display: inline-block;
+        margin-top: 50px;
+        align-items: center;
+        /* width: 30%; */
+        height: 344px;
+        padding: 20px;
+        margin-left: 100px;
+
+    }
+
+    .box1 {
+        /* border:2px solid red; */
+        object-fit: cover;
+        /* height: 400px; */
+        /* width: 30% ; */
+        width: 30%;
+        height: 300px;
+        display: inline-block;
+        padding: 90px;
+        /* margin: 10px ; */
+    }
+
+    .box1 img {
+        margin-top: -50px;
+        margin-left: -20px;
+        height: 200px;
+        width: 200px;
+        background-image: linear-gradient(40deg, #65e5da, #fff0e5);
+    }
+
+    #socialLinks {
+        position: absolute;
+        bottom: -120%;
+        right: 2%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #socialLinks a {
+        text-decoration: none;
+        margin: 30px 0;
+    }
+
+    #socialLinks a i {
+        height: 50px;
+        width: 50px;
+        margin: 0 20px;
+        font-size: 20px;
+        color: #090909;
+        /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); */
+        display: grid;
+        place-items: center;
+        border-radius: 10px;
+        background: transparent;
+    }
+
+    #socialLinks a i:hover {
+        background: transparent;
+        color: #abb9c8;
+        border: 2px solid #a6c1d7;
+    }
+</style>
+
+<body>
+    <section class="header">
+
+        <header class="header">
+            <!-- left box for logo -->
+            <div class="left">
+                <img src="logo.jpg" alt="">
+                <div>Earphone</div>
+            </div>
+            <!-- mid box for nav bar -->
+            <div class="mid">
+                <ul class="nav">
+                    <li><a href=" #" class="active">Home</a></li>
+                    <li><a href=" #">About us</a></li>
+                    <li><a href=" #">Product </a></li>
+                    <li><a href=" #">contact</a></li>
+                </ul>
+            </div>
+            <!-- right bar for button -->
+            <div class="right">
+                <button class="btn">order</button>
+                <button class="btn">sign up</button>
+            </div>
+
+            <div class="para">
+                <h3 class="h3">The Sound <br> of New <br> the World</h3>
+                <p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error tempora, exercitationem
+                    omnis fugiat eum iste consequuntur! Dignissimos vel quidem veniam.
+                </p>
+            </div>
+            <div class="col">
+                <img src="headphone.png" alt="Boat Headphone" class="featured-img">
+
+            </div>
+
+            <div class="buttons">
+                <button class="btn dark">Buy Now</button>
+                <button class="btn light">Shop All</button>
+            </div>
+
+
+
+    </section>
+
+
+    <section class="container">
+
+        <h2 class="heading1">Avalaible Multiple Types</h2>
+        <div class="box">
+            <div class="box1">
+                <img src="ocean-headphone.png" alt="" class="product-img">
+                <h3 class="product-heading">boAt Ocean</h3>
+                <button class="btn dark">Buy Now</button>
+
+            </div>
+            <div class="box1">
+                <img src="charcole-headphone.png" alt="" class="product-img">
+                <h3 class="product-heading">boAt Charcole</h3>
+                <button class="btn dark">Buy Now</button>
+            </div>
+            <div class="box1">
+                <img src="headphone.png" alt="" class="product-img">
+                <h3 class="product-heading">boAt Dessert</h3>
+                <button class="btn dark">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    </header>
+
+    <div id="socialLinks">
+        <!-- facebook -->
+        <a href="">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- instagram -->
+        <a href="">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <!-- youtube -->
+        <a href="">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+
+
+
+</body>
+
+</html>
